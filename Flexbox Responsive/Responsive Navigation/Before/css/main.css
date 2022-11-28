@@ -24,6 +24,17 @@ header {
     align-items: center;
 }
 
+nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    transition: right 0.3s ease-in-out;
+    background: #FFF;
+    min-height: 100vh;
+    width: 60%;
+    padding: 3em;
+}
+
 a.logo {
     color: #0460BC;
     font-size: 2.2rem;
@@ -38,6 +49,8 @@ ul {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     gap: 4.3em;
 }
 
@@ -71,4 +84,51 @@ a.cart p {
 
 a.cart:hover {
     background-color: #B5C0CE;
+}
+
+.close-btn {
+    display: block;
+    margin-left: auto;
+    margin-bottom: 2em;
+}
+
+.menu-btn,
+.close-btn {
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+}
+
+.menu-btn img,
+.close-btn img {
+    width: 3rem;
+}
+
+.mobile-nav {
+    display: flex;
+    gap: 2em;
+}
+
+.open {
+    right: 0;
+}
+
+@media screen and (min-width: 700px) {
+    .close-btn,
+    .menu-btn {
+        display: none;
+    }
+
+    nav {
+        position: unset;
+        background: none;
+        min-height: auto;
+        width: auto;
+        padding: 0;
+    }
+
+    ul {
+        flex-direction: row;
+        gap: 2em;
+    }
 }
