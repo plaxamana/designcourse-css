@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #181818;
+  color: #878787;
+  padding: 4em;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.8em;
+}
+
+.number {
+  font-weight: bold;
+  color: #FFF;
+  font-size: 3.2rem;
+}
+
+.large {
+  font-size: 5.5rem;
+}
+
+.number + div {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.large + div {
+  font-weight: bold;
+  color: #FFF;
+}
+
+.card {
+  padding: 3em;
+}
+
+.purple {
+  background: #7000FF;
+  border-radius: 1em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #2E2E2E;
+  border-radius: 1em;
+  padding: 3em;
+  gap: 3.6em;
+}
+
+
+.container div {
+  flex: 1;
+}
+
+.stats-container {
+  display: flex;
+  gap: 1.1em;
+  color: #FFF;
+}
+
+.cta {
+  background: #7000FF;
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 2rem; 
+  color: #FFF;
+  text-align: center;
+  padding: 1.4rem 3rem;
+  border-radius: 1rem;
+  margin-bottom: 2.2rem;
+}
+
+.text {
+  font-size: 1.4rem;
+  text-align: center;
+  max-width: 268px;
+  margin: 0 auto;
+}
+
+.text span {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 850px) {
+  main {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .purple {
+    flex: 1
+  }
+
+
+  .container {
+    flex-direction: row;
+    flex: 2;
+  }
+
+  .cta-card {
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .purple,
+  .cta-card {
+    flex: 1;
+  }
+
+  .cta-card {
+    flex-basis: 0;
+  }
+
+}
