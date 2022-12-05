@@ -95,6 +95,10 @@ main {
 }
 
 @media screen and (min-width: 850px) {
+  .stats-container {
+    align-items: center;
+  }
+
   main {
     flex-direction: row;
     flex-wrap: wrap;
