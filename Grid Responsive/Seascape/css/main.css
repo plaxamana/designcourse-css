@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 8.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 0;
+}
+
+body {
+  background: #F0C5AD;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  line-height: 145%;
+  padding: 0 3.8rem;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100px 300px repeat(2, 150px);
+  gap: 2px;
+  max-width: 600px;
+  margin: 5rem auto;
+}
+
+.seascape {
+  grid-row: 2 / 3;
+  grid-column: 1 / -1;
+}
+
+.flex-container {
+  display: flex;
+  gap: 3rem;
+}
+
+.sky1 {
+  background-image: url(../assets/sky1.jpeg);
+  background-size: cover;
+  grid-column: 1 / -1;
+}
+
+.sky1,
+.group {
+  gap: 2px;
+}
+
+.group {
+  grid-column: 1 / -1;
+  grid-row: 4 / 5;
+  display: flex;
+}
+
+.sky2 {
+  background-image: url(../assets/sky2.jpeg);
+  background-size: cover;
+  flex: 1;
+}
+
+.alley {
+  background-image: url(../assets/alley.jpeg);
+  background-size: cover;
+  flex: 1;
+}
+
+.feature {
+  max-width: 145px;
+}
+
+@media only screen and (min-width: 900px) {
+  section {
+    max-width: 900px;
+  }
+
+  .feature {
+    max-width: unset;
+    padding: 3.4rem;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .feature:nth-of-type(1) {
+    padding-left: 0;
+  }
+
+  .feature:nth-of-type(3) {
+    padding-right: 0;
+  }
+}
