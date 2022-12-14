@@ -188,3 +188,81 @@ footer .wrapper .cta-btns {
 .tos a {
     text-decoration: underline;
 }
+
+/* media queries */
+
+@media (min-width: 700px) {
+    /* header */
+    .header-cta {
+        display: block;
+        background-color: var(--primary-color);
+        padding: 1rem 2rem;
+        color: #FFF;
+        font-weight: 700;
+        border-radius: .3rem;
+    }
+
+    /* hero */
+    h1 {
+        margin-top: 0;
+        font-size: 5rem;
+        line-height: 98%;
+        margin-bottom: 0;
+    }
+
+    .hero p {
+        font-size: 2.8rem;
+        line-height: 129%;
+        margin-bottom: 3rem;
+    }
+
+    .hero {
+        margin-top: 10rem;
+        text-align: left;
+    }
+
+    .hero .cta-btns {
+        justify-content: flex-start;
+    }
+
+    .hero .wrapper {
+        flex-direction: row;
+        gap: 3rem;
+        margin-right: 0;
+    }
+
+    .left-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 2;
+    }
+
+    .right-col {
+        flex: 1;
+        position: relative;
+        height: 530px;
+        overflow: hidden;
+    }
+
+    .phone {
+        width: 200%;
+    }
+
+    /* features */
+    .features .wrapper ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features .wrapper ul li:last-of-type {
+        grid-column: 1 / -1;
+    }
+
+    strong svg {
+        width: 4.8rem;
+        height: 4.8rem;
+    }
+
+    
+}
