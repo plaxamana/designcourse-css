@@ -266,9 +266,25 @@ footer .wrapper .cta-btns {
   }
 
   /* features */
+  .features {
+    position: relative;
+  }
+
+  .features:before {
+    position: absolute;
+    content: '';
+    left: 2rem;
+    bottom: -2rem;
+    background-image: url(../assets/graphic.svg);
+    background-repeat: no-repeat;
+    height: 5rem;
+    width: 100%;
+  }
+
   .features .wrapper ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    padding: 4rem 0;
   }
 
   .features .wrapper ul li:last-of-type {
