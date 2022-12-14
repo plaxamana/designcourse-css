@@ -90,7 +90,11 @@ h1 {
 }
 
 .phone {
+  position: relative;
+  z-index: 1;
   width: 100%;
+  margin-top: 5rem;
+  margin-bottom: -10rem;
 }
 
 .hero .wrapper {
@@ -265,16 +269,28 @@ footer .wrapper .cta-btns {
     width: 200%;
   }
 
+  .phone {
+    position: relative;
+    z-index: 1;
+    width: 200%;
+    margin-top: unset;
+    margin-bottom:unset
+  }
+
+  .cta-btn img {
+    max-height: 60px;
+  }
+
   /* features */
-  .features {
+  .features .wrapper {
     position: relative;
   }
 
-  .features:before {
+  .features .wrapper:before {
     position: absolute;
-    content: '';
-    left: 2rem;
-    bottom: -2rem;
+    content: "";
+    left: 0;
+    bottom: -8rem;
     background-image: url(../assets/graphic.svg);
     background-repeat: no-repeat;
     height: 5rem;
@@ -323,5 +339,101 @@ footer .wrapper .cta-btns {
 
   .socials {
     margin-top: auto;
+  }
+}
+
+@media (min-width: 1000px) {
+  /* hero */
+  h1 {
+    font-size: 5.8rem;
+  }
+
+  .hero p {
+    font-size: 3.2rem;
+  }
+
+  .wrapper {
+    max-width: 1100px;
+    margin: 2.6rem auto;
+    padding: 0 2.6rem;
+  }
+
+  .hero .wrapper {
+    margin-right: auto;
+  }
+
+  .left-col,
+  .right-col {
+    flex: 1;
+  }
+
+  .right-col {
+    overflow: unset;
+  }
+
+  .phone {
+    width: 100%;
+  }
+
+  /* features */
+  .features .wrapper ul {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 4rem 0;
+    gap: 2rem;
+    height: 350px;
+  }
+
+  .features .wrapper ul li {
+    padding: 0 3rem;
+  }
+
+  .features strong {
+    flex-direction: row;
+    align-items: center;
+    margin-left: -5rem;
+  }
+
+  .features .wrapper ul li:nth-of-type(2) {
+    grid-column: unset;
+    align-self: center;
+  }
+
+  .features .wrapper ul li:last-of-type {
+    grid-column: unset;
+    align-self: end;
+  }
+
+  .features .wrapper:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -10rem;
+    background-image: url(../assets/graphic.svg);
+    background-repeat: no-repeat;
+    height: 10rem;
+    width: 100%;
+  }
+
+  /* testimonials */
+  .testimonials {
+    padding: 4rem 0;
+  }
+
+  .testimonials .wrapper {
+    flex-direction: row;
+    gap: 5rem;
+  }
+
+  .testimonial-body {
+    text-align: right;
+  }
+
+  .testimonial-body,
+  .testimonial-author-container {
+    flex: 1;
+  }
+
+  .testimonial-body h2 {
+    margin-top: 0;
   }
 }
