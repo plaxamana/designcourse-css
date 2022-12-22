@@ -82,6 +82,12 @@ header svg {
   gap: 2em;
 }
 
+.header-right .user {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
 header.primary,
 .user {
   display: flex;
@@ -90,7 +96,7 @@ header.primary,
 }
 
 a.logo img {
-  width: 170px;
+  width: 140px;
 }
 
 aside {
@@ -163,6 +169,10 @@ aside ul li a {
 .extra-stats ul {
   display: flex;
   justify-content: space-between;
+  gap: 1em;
+}
+.extra-stats ul li {
+  flex: 1;
 }
 .extra-stats ul strong {
   font-size: 2.6rem;
@@ -179,4 +189,107 @@ h1 {
   background-color: var(--secondary-color);
   border-radius: 1em;
   padding: 2.8em;
+}
+
+.customers ul {
+  display: grid;
+  margin-top: 2em;
+  grid-template-columns: 1fr;
+  gap: 2em;
+  color: white;
+}
+.customers ul li {
+  display: flex;
+  justify-content: space-between;
+}
+.customers ul li .cta-btn img {
+  width: 24px;
+  height: 24px;
+  padding: 1em;
+  background-color: var(--secondary-color);
+  border-radius: 0.3em;
+}
+.customers ul .user-left {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.customers ul .user-left img {
+  width: 48px;
+  height: 48px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.customers ul .user-info strong {
+  display: block;
+}
+
+@media only screen and (min-width: 620px) {
+  .signout {
+    display: block;
+    padding: 0.7em;
+    background-color: var(--secondary-color);
+    border-radius: 0.3em;
+  }
+  .header-right nav {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+  }
+  aside {
+    position: inherit;
+    height: auto;
+    width: auto;
+    background: unset;
+    padding: 2em;
+    margin-top: 2em;
+    transform: unset;
+    text-align: inherit;
+    transition: unset;
+    background-color: var(--secondary-color);
+    border-radius: 1em;
+  }
+  aside img {
+    background: unset;
+    cursor: unset;
+  }
+  aside nav ul {
+    margin-top: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  aside nav ul li {
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+  aside nav ul li a {
+    font-size: 1.8rem;
+  }
+  aside nav ul li img {
+    display: block !important;
+  }
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 3em;
+  }
+  main .extra-stats ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+  }
+  main .sales img {
+    width: 100%;
+  }
+  main .earnings,
+main .customers {
+    grid-column: span 2;
+  }
+  .customers ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }/*# sourceMappingURL=main.css.map */
