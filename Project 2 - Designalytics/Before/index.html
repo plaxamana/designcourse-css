@@ -30,7 +30,7 @@
                 </nav>
                 <a href="#" class="menu hide-tablet">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="w-6 h-6">
+                        stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
@@ -173,6 +173,22 @@
             </main>
         </div>
     </div>
+
+    <script>
+        const menu = document.querySelector('.menu');
+        const exit = document.querySelector('.exit');
+        const nav = document.querySelector('aside');
+
+        menu.addEventListener('click', (e) => {
+            e.preventDefault();
+            nav.classList.toggle('toggle-menu');
+        });
+
+        exit.addEventListener('click', (e) => {
+            e.preventDefault();
+            nav.classList.toggle('toggle-menu');
+        });
+    </script>
 </body>
 
 </html>
