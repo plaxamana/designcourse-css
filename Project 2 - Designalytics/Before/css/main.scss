@@ -340,7 +340,7 @@ h1 {
           margin-bottom: 0;
           display: flex;
           align-items: center;
-          gap: .5em;
+          gap: 0.5em;
         }
       }
     }
@@ -348,7 +348,7 @@ h1 {
     .premium {
       display: block;
       padding: 2.5em;
-      border-radius: .5em;
+      border-radius: 0.5em;
       color: white;
       background-color: var(--inner-panel-color);
 
@@ -368,7 +368,7 @@ h1 {
 
       p {
         font-size: 1.4rem;
-        color: #BBBFCE;
+        color: #bbbfce;
         margin: 0;
         line-height: 150%;
       }
